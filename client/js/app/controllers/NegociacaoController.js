@@ -58,7 +58,6 @@ class NegociacaoController {
                 });   
             });  
         });
-
     }
 
     apaga() {
@@ -66,8 +65,7 @@ class NegociacaoController {
         this._mensagem.texto = 'Negociaçoes apagas com sucesso';
     }
     
-    _criaNegociacao() {
-        
+    _criaNegociacao() {  
         return new Negociacao(
             DateHelper.textoParaData(this._inputData.value),
             this._inputQuantidade.value,
@@ -75,7 +73,6 @@ class NegociacaoController {
     }
     
     _limpaFormulario() {
-     
         this._inputData.value = '';
         this._inputQuantidade.value = 1;
         this._inputValor.value = 0.0;
